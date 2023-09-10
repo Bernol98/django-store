@@ -15,8 +15,9 @@ from django.contrib import admin
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now'''
 class Product(models.Model):
-    id = models.IntegerField(unique=True,primary_key=True)
+    id = models.AutoField(unique=True,primary_key=True,auto_created=True)
     title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='static/images',null=True)
     desc = models.CharField(max_length=255)
     price = models.FloatField()
     quantity = models.PositiveIntegerField()

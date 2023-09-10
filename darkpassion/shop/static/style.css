@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Style the header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style the main content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Style the image blocks */
+.image-block {
+    width: 30%;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the images */
+.image-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the image descriptions */
+.image-block p {
+    margin-top: 10px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
