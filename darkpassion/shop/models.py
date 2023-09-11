@@ -17,7 +17,7 @@ from django.contrib import admin
 class Product(models.Model):
     id = models.AutoField(unique=True,primary_key=True,auto_created=True)
     title = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='static/images',null=True)
+    image = models.ImageField(upload_to='shop/images',null=True)
     desc = models.CharField(max_length=255)
     price = models.FloatField()
     quantity = models.PositiveIntegerField()
