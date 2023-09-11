@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+{%load static%}
+{% csrf_token %}
 <html lang="en">
 <head>
-    {%load static%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'shop/style.css' %}">
@@ -12,12 +12,14 @@
         <h1>All products</h1>
     </header>
     <main>
-        {% for image in images %}
-        <div class="image-block">
-            <img src="{{ image.image.url }}" alt="{{ image.title }}">
-            <p>{{ image.title }}</p>
-        </div>
+        {% for product in main_page_product_list %}
+    <div class="image-block">
+        <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        <p>{{ product.title }}</p>
+        <img src="/images/hoodie.png">
+    </div>
         {% endfor %}
+
     </main>
 </body>
 </html>
