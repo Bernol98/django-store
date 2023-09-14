@@ -1,5 +1,4 @@
 {%load static%}
-{% csrf_token %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,15 +10,12 @@
     <header>
         <h1>All products</h1>
     </header>
-    <main>
-        {% for product in main_page_product_list %}
     <div class="image-block">
-        <img src="{{ product.image.url }}" alt="{{ product.title }}">
-        <p>{{ product.title }}</p>
-        <img src="/images/hoodie.png">
-    </div>
+    <main>
+        {% for product in products %}
+        <img src="{% url 'get_products' product.id %}" alt="{{ product.title }} Image">
         {% endfor %}
-
     </main>
+</div>
 </body>
 </html>
