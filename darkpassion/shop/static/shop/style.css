@@ -20,27 +20,19 @@ header {
 
 /* Style the main content */
 main {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
 }
 
 /* Style the image blocks */
-.image-block {
-    width: 30%;
-    margin: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 10px;
+.image-container {
+    display: inline-block;
+    justify-content: space-between; /* Distribute images evenly */
+    flex-wrap: nowrap; /* Prevent line breaks */
 }
 
-/* Style the images */
-.image-block img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 /* Style the image descriptions */
 .image-block p {
