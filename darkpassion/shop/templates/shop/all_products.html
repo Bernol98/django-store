@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,16 @@
     <title>Shop</title>
 </head>
 <body>
-    <header>
-        <h1>All products</h1>
-    </header>
-    <div class="image-block">
-    <main>
-        {% for product in products %}
-        <img src="{% url 'get_products' product.id %}" alt="{{ product.title }} Image">
+    <header>All Images</header>
+    <div class="image-container">
+    <ul>
+        {% for product in all_products %}
+            <li>
+                <h2>{{ product.name }}</h2>
+                <img src="{{ product.image.url }}" alt="{{ product.name }} Image">
+            </li>
         {% endfor %}
-    </main>
+    </ul>
 </div>
 </body>
 </html>
