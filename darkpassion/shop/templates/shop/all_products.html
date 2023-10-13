@@ -7,16 +7,22 @@
     <title>Shop</title>
 </head>
 <body>
-    <header>All Images</header>
-    <div class="image-container">
-    <ul>
-        {% for product in all_products %}
-            <li>
-                <h2>{{ product.name }}</h2>
-                <img src="{{ product.image.url }}" alt="{{ product.name }} Image">
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+    <header>All Products</header>
+    <div class="gallery">
+        <ul class="row">
+            {% for product in all_products %}
+                <li class="image">
+                    <div class='image-content'>
+                        <img src="{{ product.image.url }}" alt="{{ product.title }} Image">
+                        <div class='image-info'>
+                            <h2>{{ product.title }}</h2>
+                            <h3>{{ product.desc }}</h3>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 </body>
 </html>

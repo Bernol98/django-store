@@ -1,48 +1,70 @@
-* {
+header {
+    display: flex;
+    text-align: center;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #333; 
+    }
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Style the body */
-body {
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
 }
 
-/* Style the header */
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Style the main content */
-main {
+.gallery {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-/* Style the image blocks */
-.image-container {
-    display: inline-block;
-    justify-content: space-between; /* Distribute images evenly */
-    flex-wrap: nowrap; /* Prevent line breaks */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-
-
-/* Style the image descriptions */
-.image-block p {
-    margin-top: 10px;
+.image {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
 }
 
-/* Style the footer */
-footer {
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-info {
+    padding: 15px;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
 }
+
+.image-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.image-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+li, ul {
+    list-style:None;
+}
+
